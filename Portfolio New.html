@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhavana Kambam | Full Stack Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4ade80;
+      --secondary: #1f2937;
+      --light: #f9fafb;
+      --accent: #6ee7b7;
+      --bg-dark: #0f172a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--bg-dark), #1e293b);
+      color: var(--light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(30px);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: slideDown 0.8s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+      transform: scale(1.1);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)), url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/p-200-ake-ae-fon-23154.jpg?w=800&dpr=1&fit=default&crop=default&auto=format&fm=pjpg&q=75&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.1.2&s=7e98b0c15fa5f5ad936af12623c3923e");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      position: relative;
+      padding: 6rem 2rem;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05), transparent);
+      animation: pulse 10s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1) rotate(0deg); }
+      100% { transform: scale(1.2) rotate(360deg); }
+    }
+
+    .hero-content {
+      max-width: 800px;
+      z-index: 1;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.6rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+    }
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.9rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent);
+      transform: scale(1.05);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 5rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .card {
+      background: rgba(31, 41, 55, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+
+    @keyframes slideUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .card h4 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #e5e7eb;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: rgba(15, 23, 42, 0.95);
+      text-align: center;
+      padding: 2rem;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bhavana Kambam</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero fade-in">
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Hi, I'm <span class="highlight">Bhavana</span>
+    </h1>
+    <p class="hero-subtitle">
+      A Passionate <span class="highlight">Full Stack Web Developer</span> crafting beautiful and scalable web experiences.
+    </p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">Explore Projects</a>
+      <a href="#contact" class="btn btn-outline">Let's Connect</a>
+    </div>
+  </div>
+  
+</section>
+
+  <section id="about">
+    <h3 class="section-title">About Me</h3>
+    <div class="card">
+      <p>I am a creative and passionate Full Stack Developer with strong skills in building modern web applications using React, Node.js, Express, and MongoDB. I enjoy solving problems and creating elegant, user-focused experiences.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h3 class="section-title">Projects</h3>
+    <div class="card-grid">
+      <div class="card">
+        <h4>Perfume E-Commerce</h4>
+        <p>Modern UI/UX, admin panel, MongoDB & AWS S3 integration</p>
+        <div class="tech"><span>React</span><span>Node.js</span><span>AWS S3</span></div>
+      </div>
+      <div class="card">
+        <h4>Portfolio CMS</h4>
+        <p>Editable portfolio with localStorage CMS features</p>
+        <div class="tech"><span>HTML</span><span>JavaScript</span><span>CSS</span></div>
+      </div>
+      <div class="card">
+        <h4>Real-time Chat App</h4>
+        <p>Chat UI with WebSocket messaging & online indicators</p>
+        <div class="tech"><span>Socket.IO</span><span>Node.js</span></div>
+      </div>
+      <div class="card">
+        <h4>College Entry/Exit System</h4>
+        <p>Tracks live presence of students and visitors</p>
+        <div class="tech"><span>MongoDB</span><span>Express</span></div>
+      </div>
+      <div class="card">
+        <h4>Snake & Ladders Game</h4>
+        <p>Fun 2-player game with animations & audio</p>
+        <div class="tech"><span>HTML</span><span>Canvas</span><span>JS</span></div>
+      </div>
+      <div class="card">
+        <h4>Codepen Clone</h4>
+        <p>Live HTML/CSS/JS editor with preview and saving</p>
+        <div class="tech"><span>JavaScript</span><span>Firebase</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3 class="section-title">Skills</h3>
+    <div class="card">
+      <div class="card"><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Tailwind</div>
+      <div class="card"><strong>Backend:</strong> Node.js, Express.js, MongoDB</div>
+      <div class="card"><strong>Tools:</strong> Git, GitHub, Firebase, AWS S3, Postman</div>
+    </div>
+  </section>
+
+   <section id="education">
+    <h3 class="section-title">Education</h3>
+    
+      <div class="card">
+        <h4>B.Tech – CSE</h4>
+        <p><strong>Institution:</strong> MITS College, Madanapalle (2022 - 2026)</p>
+        <p><strong>CGPA:</strong> 8.89 / 10</p>
+        <p><strong>Relevant Coursework:</strong><br>Web Technologies, Cloud Computing, DBMS, DSA</p>
+      </div>
+      <div class="card">
+        <h4>Intermediate – MPC</h4>
+        <p><strong>Institution:</strong> Sri Chaitanya Junior College, Tirupati</p>
+        <p><strong>Score:</strong> 96%</p>
+      </div>
+      <div class="card">
+        <h4>10th Standard</h4>
+        <p><strong>School:</strong> [Enter School Name]</p>
+        <p><strong>Score:</strong> 95%</p>
+      </div>
+    
+  </section>
+
+  <section id="contact">
+    <h3 class="section-title">Contact</h3>
+    <div class="card">
+      <p>Email: <a href="mailto:bhavanakambam26@gmail.com" style="color: var(--primary);">bhavanakambam26@gmail.com</a></p>
+      <p>GitHub: <a href="#" style="color: var(--primary);">github.com/bhavana</a></p>
+      <p>LinkedIn: <a href="#" style="color: var(--primary);">linkedin.com/in/bhavana</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bhavana Kambam. All rights reserved.</p>
+  </footer>
+</body>
+</html>
