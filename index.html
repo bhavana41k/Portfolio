@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhavana Kambam | Full Stack Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <p>Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+
+  <!-- Floating Particles -->
+  <div class="particles" id="particles"></div>
+
+  <header>
+    <h1>Bhavana Kambam</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span style="color: #4ade80;">Bhavana</span></h1>
+      <p>A Full Stack Web Developer crafting elegant and efficient web solutions.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">I am a passionate Full Stack Developer with experience in React, Node.js, Express, and MongoDB. I build user-friendly and scalable applications with attention to detail and performance.</p>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <p style="text-align: center; margin-bottom: 2rem; font-size: 2.4rem;">
+    📂 View all my projects here 👉 
+    <a href="https://github.com/bhavana41k?tab=repositories" target="_blank" style="color: #4ade80; text-decoration: underline; font-weight: 500;">
+      GitHub  
+    </a>
+</p>
+    <div class="card-grid">
+      <!-- Project 1 -->
+      <div class="card">
+        <a href="https://github.com/bhavana41k?tab=repositories" target="_blank"></a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaTOlaGyLMx-jSkVuYAwGFg3Y1DXOyxXKS2w&s" alt="Perfume E-Commerce">
+        <div class="card-content">
+          <h4>Perfume E-Commerce Website – MERN Stack</h4>
+          <p>A complete perfume shopping website with separate admin/user dashboards.</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>User & Admin login via Firebase</li>
+            <li>CRUD on Products, Orders, Users</li>
+            <li>Image upload to AWS S3, PDF invoices</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Firebase Auth, AWS S3, Multer, PDFKit, Vite, Axios</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbRko6U6356D-To12d0Ak1VPAf1xoiOy-JQ&s" alt="React Portfolio">
+        <div class="card-content">
+          <h4>Personal Portfolio using React</h4>
+          <p>Responsive developer portfolio with a local CMS-style editing system.</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Edit projects, skills, contact sections</li>
+            <li>Live preview without backend</li>
+            <li>Responsive and recruiter-friendly layout</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> React.js, HTML5, CSS3, JavaScript, localStorage</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="card">
+        <img src="https://digitalleadership.com/wp-content/uploads/2022/03/Kanban-Board.webp" alt="Kanban Board">
+        <div class="card-content">
+          <h4>Kanban Board – Task Tracker using React</h4>
+          <p>A productivity tool to manage tasks via drag-and-drop cards.</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>CRUD tasks & categories</li>
+            <li>Drag-and-drop + color-coded priority</li>
+            <li>LocalStorage persistence</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> React.js, HTML, CSS, JavaScript, localStorage</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="card">
+        <img src="https://reactjsexample.com/content/images/2021/12/Snipaste_2021-12-30_17-18-30.jpg" alt="Code Editor Clone">
+        <div class="card-content">
+          <h4>Online Code Editor – CodePen Clone</h4>
+          <p>A live frontend code playground with real-time preview and saving.</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Live HTML/CSS/JS preview</li>
+            <li>Dark/Light theme toggle</li>
+            <li>Save pens with localStorage</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> React.js, HTML5, CSS3, JavaScript, localStorage</p>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkCUWeus20CDI7ngw2oVFpV-7V8_LfDuUNUw&s" alt="Login Clone">
+        <div class="card-content">
+          <h4>Netflix & Prime Login Page Clone</h4>
+          <p>Pixel-perfect responsive clone of Netflix and Prime Video login UIs.</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>UI clone with modals & gradients</li>
+            <li>Animations & form validation</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript</p>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNkcolR5B9DEBtR7NMEgkNO06QULXhDtbF1w&s" alt="Snake & Ladders Game">
+        <div class="card-content">
+          <h4>Snake & Ladders / Up 7 Down Games</h4>
+          <p>Interactive multiplayer board games playable in-browser.</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Animated dice rolls and sound effects</li>
+            <li>Interactive Canvas + Game Logic</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, Canvas API</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div><strong>Languages:</strong><br>Java, Python, JavaScript</div>
+      <div><strong>Frontend:</strong><br>HTML, CSS, JavaScript, React, React Native</div>
+      <div><strong>Backend:</strong><br>Node.js, Express.js, MongoDB</div>
+      <div><strong>Tools:</strong><br>Git, GitHub, Firebase, AWS S3, Postman, Vite</div>
+    </div>
+
+  </section>
+
+  <section id="education">
+    <h2 class="section-title"> Education Details</h2>
+    <div class="education-block">
+      <div>
+        <h3>B.Tech in Computer Science</h3>
+        <p>Madanapalle Institute of Technology and Science</p>
+        <p><strong>Year of Passing:</strong> 2026 &nbsp; | &nbsp; <strong>CGPA:</strong> 8.89</p>
+      </div>
+      <div>
+        <h3>Intermediate (MPC)</h3>
+        <p>Sri Chaitanya Junior College</p>
+        <p><strong>Year of Passing:</strong> 2022 &nbsp; | &nbsp; <strong>Score:</strong> 95.8%</p>
+      </div>
+      <div>
+        <h3>SSC</h3>
+        <p>New Vikas High School</p>
+        <p><strong>Year of Passing:</strong> 2020 &nbsp; | &nbsp; <strong>Score:</strong> 95.6%</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me Here</h2>
+    <div class="contact-grid">
+      <a href="mailto:bhavanakambam26@gmail.com">📧 bhavanakambam26@gmail.com</a>
+      <a href="https://linkedin.com/in/bhavana" target="_blank">🔗 LinkedIn: linkedin.com/in/bhavana</a>
+      <a href="https://github.com/bhavana41k" target="_blank">🔗 GitHub: github.com/bhavana41k</a>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 Bhavana Kambam. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
